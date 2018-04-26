@@ -4,8 +4,10 @@
   "description": "vue webpack",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV=roduction webpack --config build/webpack.config.client.js",
+    "build:client": "cross-env NODE_ENV=roduction webpack --config build/webpack.config.client.js",
+    "build": "npm run clean && npm run build:client",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js"
   },
   "repository": {
@@ -37,6 +39,7 @@
     "html-webpack-plugin": "^2.30.1",
     "postcss": "^6.0.16",
     "postcss-loader": "^2.0.10",
+    "rimraf": "^2.6.2",
     "style-loader": "^0.19.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",

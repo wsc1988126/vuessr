@@ -1,9 +1,9 @@
 <template>
-  <header class="main-header">
+  <header :class="$style.mainHeader">
     <h1>Todo</h1>
   </header>
 </template>
-<style lang="stylus" scoped>
+<style lang="stylus" scoped module>
 .main-header
   text-align center 
   h1 
@@ -12,4 +12,7 @@
     font-weight 300
     margin 20px
 </style>
+<docs>
+#123 = 456
+</docs>
 
